@@ -1,0 +1,114 @@
+<!Doctype html>
+<html lang ="en">
+ <head> 
+ <title>La Lanclos Salon</title>
+ <meta charset ="utf-8">
+ <meta name ="viewport" content ="width=device-width, initial-scale =1"> 
+ <style> 
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 10%;
+  height: 300px; /* only for demonstration, should be removed */
+  
+  padding: 20px;
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+color: white;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body background = "background.jpeg">
+ 
+<header>
+  <h2>Appointment</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+	  <li><a href="LaLanclosSalon.html">Home</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="service.html">service</a></li>
+      <li><a href="account.html">account</a></li>
+	  <li><a href="product.html">product</a></li>
+	  <li><a href="appt.html">appointment</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Select time and service  </h1>
+    
+	
+	
+	<h1> Medicures</h1>
+	<select>
+  <option value=" level 1"> level 1</option>
+  <option value="Level 2"> Level 2</option>
+  <option value="Level 3:"> Level 3:</option>
+  <option value="Face Mask"> Face Mask</option>
+  <option value="Waxing"> Waxing</option>
+</select>
+
+  </article>
+</section>
+
+<footer>
+  <p>La Lanclos Salon </p>
+</footer>
+
+ 
+
+ 
+ </body> 
+ 
+ 
+</html> 
