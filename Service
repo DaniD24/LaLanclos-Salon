@@ -1,0 +1,167 @@
+<!Doctype html>
+<html lang ="en">
+ <head> 
+ <title>La Lanclos Salon</title>
+ <meta charset ="utf-8">
+ <meta name ="viewport" content ="width=device-width, initial-scale =1"> 
+ <style> 
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 10%;
+  height: 300px; /* only for demonstration, should be removed */
+  
+  padding: 20px;
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+color: white;
+  
+}
+
+article2 {
+  float: right;
+  padding: 30px;
+color: white;
+}
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body background = "background.jpeg">
+ 
+<header>
+  <h2>Service</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+		<li><a href="LaLanclosSalon.html">Home</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="service.html">service</a></li>
+      <li><a href="account.html">account</a></li>
+	  <li><a href="product.html">product</a></li>
+	  <li><a href="appt.html">appointment</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1> Options </h1>
+    <p> at LaLancos Spa we do a spread of sevices for your relaxation needs</p>
+	
+	<h1> Manicures $50</h1>
+
+<ul>
+  <li>level 1: Cut/Shape/Buffer</li>
+  <li>Level 2: Paint/Design with level 1 </li>
+  <li>Level 3: Acryllic/Gel/French/ with level 1 and level 2 </li>
+</ul>
+
+	<h1> pedicures $50</h1>
+	
+<ul>
+  <li>level 1: Cut/Shape/Buffer</li>
+  <li>Level 2: Paint/Design with level 1 </li>
+  <li>Level 3: Acryllic/Gel/French/ with level 1 and level 2 </li>
+</ul>
+
+	<h1> Massages $80 </h1>
+
+<ul>
+  <li>Hands</li>
+  <li>Feet</li>
+  <li>Face</li>
+  <li>Back</li>
+  <li>Full Body</li>
+  <li> Hot Stone Massages </li>
+</ul>
+</article>
+
+<article2> 
+	<h1>Facial $40</h1>
+
+<ul>
+  <li>Face Mask</li>
+  <li>Eyebrows(Waxing/Thread</li>
+
+</ul>
+
+	<h1>Waxing $40</h1>
+
+<ul>
+  <li>Mouth</li>
+  <li>Underarm</li>
+  <li> Half Arm</li>
+  <li>Full Arm</li>
+  <li>Half Leg</li>
+  <li>Bikini </li>
+  <li> Brazilian</li>
+  <li> Chest/Back</li>
+
+</ul>
+	
+  </article2>
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+  <p>La Lanclos Salon </p>
+</footer>
+
+ 
+
+ 
+ </body> 
+ 
+ 
+</html> 
