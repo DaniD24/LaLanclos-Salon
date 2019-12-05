@@ -86,8 +86,17 @@ footer {
   
   <article>
     <h1>product list </h1>
-    <p> enter text about the products here with price  need more entries just make another  p tag like this one </p>
-    <p> like this a new pargraph is been created</P>
+   	<p> Oils: $35 (These oils are used to treat emotional disorders, organ dysfunction, and skin problems through a variety of internal
+	and external application techniques. Plants and flowers from which these oils are extracted include rosemary, lavender, roses, chamomile,
+	eucalyptus, pine, and etc.) </p>
+   	<p> Candles: $25 (Each candle contains a lead-free wick that won't burn out and no added dyes. Candle melts consistently and evenly, 
+	radiating enough fragrance to fill an entire room. Contains notes of Succulent White Peach, Sparkling Prosecco, and Sweet Orange with 
+	essential oils.</p>
+	<p> Soaps: $30 (After your bath or shower your skin will feel silky smooth, soft, and have a healthy glow. This unusual soap containing 50% salts,
+	moisturizing Shea butter, and nourishing seaweed, gently polishes and moisturizes your skin.</p>
+	<p> Lotion: $30 (This luxurious body cream is formulated with rich, sea-based nutrients to hydrate and replenish atmospherically stressed skin. 
+	Infused with marine extracts of Japanese sea fennel to impart a healthy glow to skin. It's fragrance is dazzlingly fresh - aqualeaf accord blended with 
+	sparkling citrus notes and a dry down of santal and soft musk. Luxurious and rich, yet fast-absorbing.</p>
 	
 	
   </article>
