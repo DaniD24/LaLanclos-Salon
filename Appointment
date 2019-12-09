@@ -2,6 +2,83 @@
 <html lang ="en">
  <head> 
  <title>La Lanclos Salon</title>
+ <?php
+    include_once 'includes/dbh.inc.php';
+
+?>
+
+
+<!Doctype html>
+<html lang ="en">
+ <head> 
+ <title>La Lanclos Salon</title>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "MCis12342019!!";
+$dbname = "CS351-2019";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password,$dbname);
+
+// Check connection
+if ($conn) 
+{
+    echo "Connected successfully";
+}
+else
+{
+die("Connection failed because" .CS351-2019_connect_error());
+}
+
+$sql = INSERT INTO `Appointment` (`app_id`, `Client_ID`, `date`, `start_time`, `end_time`) VALUES (NULL, '1', '2019-12-09', '00:00:00', '00:10:00')
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$sql = INSERT INTO `Appointment` (`app_id`, `Client_ID`, `date`, `start_time`, `end_time`) VALUES
+(101, 1, '2019-12-09', '00:00:00', '00:10:00'),
+(102, 2, '2019-12-09', '00:00:00', '00:25:00'),
+(103, 3, '2019-12-10', '00:00:00', '01:00:00'),
+(201, 4, '2019-12-09', '00:00:00', '00:20:00'),
+(202, 5, '2019-12-09', '00:00:00', '00:30:00'),
+(203, 6, '2019-12-09', '00:00:00', '01:00:00'),
+(301, 7, '2019-12-09', '00:00:00', '00:30:00'),
+(302, 7, '2019-12-09', '00:00:00', '00:30:00'),
+(303, 8, '2019-12-09', '00:00:00', '00:30:00'),
+(304, 9, '2019-12-09', '00:00:00', '01:00:00'),
+(305, 10, '2019-12-09', '00:00:00', '02:00:00'),
+(306, 11, '2019-12-09', '00:00:00', '02:00:00'),
+(401, 1, '2019-12-09', '00:00:00', '00:00:00'),
+(402, 2, '2019-12-09', '00:00:00', '00:00:00'),
+(501, 3, '2019-12-09', '00:00:00', '00:15:00'),
+(502, 4, '2019-12-09', '00:00:00', '00:15:00'),
+(503, 5, '2019-12-09', '00:00:00', '00:15:00'),
+(504, 6, '2019-12-09', '00:00:00', '00:20:00'),
+(505, 8, '2019-12-09', '00:00:00', '00:20:00'),
+(506, 9, '2019-12-09', '00:00:00', '00:25:00'),
+(507, 9, '2019-12-09', '00:00:00', '00:20:00'),
+(508, 10, '2019-12-09', '00:00:00', '00:25:00'),
+(509, 11, '2019-12-09', '00:00:00', '00:30:00');
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$sql = DELETE FROM `Appointment` WHERE end_time = 02:00:00
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$sql = UPDATE `Appointment` SET `Client_ID`= 4 WHERE `app_id` = 101
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
  <meta charset ="utf-8">
  <meta name ="viewport" content ="width=device-width, initial-scale =1"> 
  <style> 
@@ -89,13 +166,43 @@ footer {
     
 	
 	
-	<h1> Medicures</h1>
+	<h1> Manicures</h1>
 	<select>
-  <option value=" level 1"> level 1</option>
-  <option value="Level 2"> Level 2</option>
-  <option value="Level 3:"> Level 3:</option>
-  <option value="Face Mask"> Face Mask</option>
-  <option value="Waxing"> Waxing</option>
+  <option value=" Level 1:Cut/Shape/buffer"> Cut/Shape/Buffer</option>
+  <option value="Level 2: Level 1 + Paint/Design"> Level 2</option>
+  <option value="Level 3:"> Level 2 + Acrylic/Gel/French:</option>
+</select>
+	<h1> Pedicures</h1>
+	<select>
+  <option value=" Level 1:Cut/Shape/buffer"> Cut/Shape/Buffer</option>
+  <option value="Level 2: Level 1 + Paint/Design"> Level 2</option>
+  <option value="Level 3:"> Level 2 + Acrylic/Gel/French:</option>
+</select>
+	<h1> Massages</h1>
+	<select>
+  <option value=" Hand Massage"> Cut/Shape/Buffer</option>
+  <option value="Foot Massage"> Level 2</option>
+  <option value=" Face Massage"> Cut/Shape/Buffer</option>
+  <option value=" Back Massage"> Cut/Shape/Buffer</option>
+  <option value=" Full Body Massage"> Cut/Shape/Buffer</option>
+  <option value=" Hot Stone Massage"> Cut/Shape/Buffer</option>
+</select>
+	<h1> Facial</h1>
+	<select>
+  <option value=" Face Mask"> Cut/Shape/Buffer</option>
+  <option value="Eyebrows Wax/Thread"> Level 2</option>
+</select>
+	<h1> Waxing</h1>
+	<select>
+  <option value=" Mouth wax"> Cut/Shape/Buffer</option>
+  <option value="Underarm Wax"> Level 2</option>
+  <option value=" Half arm Wax"> Cut/Shape/Buffer</option>
+  <option value=" Full arm Wax"> Cut/Shape/Buffer</option>
+  <option value=" Half leg Wax"> Cut/Shape/Buffer</option>
+  <option value=" Full leg Wax"> Cut/Shape/Buffer</option>
+  <option value=" Bikini Wax"> Cut/Shape/Buffer</option>
+  <option value=" Brazilian Wax"> Cut/Shape/Buffer</option>
+  <option value=" Chest/Back Wax"> Cut/Shape/Buffer</option>
 </select>
 
   </article>
