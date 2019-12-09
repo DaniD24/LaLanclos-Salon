@@ -84,6 +84,14 @@ footer {
     </ul>
   </nav>
   
+  SELECT `product_ID`, `spa_code`, `product_name`, `product_quantity`, `product_descrip`, `product_price`, `product_brand` FROM `Inventory` WHERE 1
+  
+  INSERT INTO `Inventory`(`product_ID`, `spa_code`, `product_name`, `product_quantity`, `product_descrip`, `product_price`, `product_brand`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])
+  
+  UPDATE `Inventory` SET `product_ID`=[value-1],`spa_code`=[value-2],`product_name`=[value-3],`product_quantity`=[value-4],`product_descrip`=[value-5],`product_price`=[value-6],`product_brand`=[value-7] WHERE 1
+  
+  DELETE FROM `Inventory` WHERE 0
+  
   <article>
     <h1>product list </h1>
    	<p> Oils: $35 (These oils are used to treat emotional disorders, organ dysfunction, and skin problems through a variety of internal
