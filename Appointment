@@ -1,8 +1,4 @@
-<!Doctype html>
-<html lang ="en">
- <head> 
- <title>La Lanclos Salon</title>
- <?php
+<?php
     include_once 'includes/dbh.inc.php';
 
 ?>
@@ -30,7 +26,7 @@ else
 die("Connection failed because" .CS351-2019_connect_error());
 }
 
-$sql = INSERT INTO `Appointment` (`app_id`, `Client_ID`, `date`, `start_time`, `end_time`) VALUES (NULL, '1', '2019-12-09', '00:00:00', '00:10:00')
+$sql = INSERT INTO `Appointment` (`app_id`, `Client_ID`, `date`, `start_time`, `end_time`) VALUES (NULL, '1', '2019-12-09', '00:00:00', '00:10:00');
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -66,19 +62,20 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$sql = DELETE FROM `Appointment` WHERE end_time = 02:00:00
+$sql = DELETE FROM `Appointment` WHERE end_time = 02:00:00;
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$sql = UPDATE `Appointment` SET `Client_ID`= 4 WHERE `app_id` = 101
+$sql = "UPDATE `Appointment` SET `end_time` = \'00:20:00\' WHERE `Appointment`.`app_id` = 401UPDATE `Appointment` SET `end_time` = \'00:20:00\' WHERE `Appointment`.`app_id` = 402";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
+?>
  <meta charset ="utf-8">
  <meta name ="viewport" content ="width=device-width, initial-scale =1"> 
  <style> 
@@ -95,7 +92,7 @@ header {
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: white;
+  color: blue;
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -116,7 +113,7 @@ article {
   float: left;
   padding: 20px;
   width: 70%;
-color: white;
+color: blue;
   height: 300px; /* only for demonstration, should be removed */
 }
 
@@ -162,47 +159,135 @@ footer {
   </nav>
   
   <article>
-    <h1>Select time and service  </h1>
+    <h1>Select time and service from 9:00 A.M to 5:00 P.M  </h1>
     
 	
 	
 	<h1> Manicures</h1>
-	<select>
-  <option value=" Level 1:Cut/Shape/buffer"> Cut/Shape/Buffer</option>
-  <option value="Level 2: Level 1 + Paint/Design"> Level 2</option>
-  <option value="Level 3:"> Level 2 + Acrylic/Gel/French:</option>
+  <p> Level 1:Cut/Shape/buffer : duration - 10 minutes</p>
+<form action="/action_page.php">
+  Select a time : <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Level 2: Level 1 + Paint/Design"> Level 2: Level 1 + Paint/Design: duration - 25 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Level 3:"> Level 2 + Acrylic/Gel/French: duration - 1 hour</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
 </select>
 	<h1> Pedicures</h1>
-	<select>
-  <option value=" Level 1:Cut/Shape/buffer"> Cut/Shape/Buffer</option>
-  <option value="Level 2: Level 1 + Paint/Design"> Level 2</option>
-  <option value="Level 3:"> Level 2 + Acrylic/Gel/French:</option>
+
+ <p> Level 1:Cut/Shape/buffer: duration - 20 minutes</p>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Level 2: Level 1 + Paint/Design"> Level 2: Level 1 + Paint/Design: duration - 30 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Level 3:"> Level 2 + Acrylic/Gel/French: duration - 1 hour</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
 </select>
 	<h1> Massages</h1>
-	<select>
-  <option value=" Hand Massage"> Cut/Shape/Buffer</option>
-  <option value="Foot Massage"> Level 2</option>
-  <option value=" Face Massage"> Cut/Shape/Buffer</option>
-  <option value=" Back Massage"> Cut/Shape/Buffer</option>
-  <option value=" Full Body Massage"> Cut/Shape/Buffer</option>
-  <option value=" Hot Stone Massage"> Cut/Shape/Buffer</option>
+ <p> Hand Massage: duration - 30 minutes</p>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Foot Massage"> Foot Massage: duration - 30 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Face Massage"> Face Massage: duration - 30 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Back Massage"> Back Massage: duration - 1 hour</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Full Body Massage"> Full Body Massage: duration - 2 hours</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Hot Stone Massage"> Hot Stone Massage: duration - 2 hours</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
 </select>
 	<h1> Facial</h1>
-	<select>
-  <option value=" Face Mask"> Cut/Shape/Buffer</option>
-  <option value="Eyebrows Wax/Thread"> Level 2</option>
+ <p> Face Mask: duration - 10 minutes</p>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Eyebrows Wax/Thread"> Eyebrows Wax/Thread: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
 </select>
 	<h1> Waxing</h1>
-	<select>
-  <option value=" Mouth wax"> Cut/Shape/Buffer</option>
-  <option value="Underarm Wax"> Level 2</option>
-  <option value=" Half arm Wax"> Cut/Shape/Buffer</option>
-  <option value=" Full arm Wax"> Cut/Shape/Buffer</option>
-  <option value=" Half leg Wax"> Cut/Shape/Buffer</option>
-  <option value=" Full leg Wax"> Cut/Shape/Buffer</option>
-  <option value=" Bikini Wax"> Cut/Shape/Buffer</option>
-  <option value=" Brazilian Wax"> Cut/Shape/Buffer</option>
-  <option value=" Chest/Back Wax"> Cut/Shape/Buffer</option>
+ <p> Mouth wax: duration - 10 minutes</p>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value="Underarm Wax"> Underarm Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Half arm Wax"> Half arm Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Full arm Wax"> Full arm Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Half leg Wax"> Half leg Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Full leg Wax"> Full leg Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Bikini Wax"> Bikini Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Brazilian Wax"> Brazilian Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
+  <option value=" Chest/Back Wax"> Chest/Back Wax: duration - 10 minutes</option>
+<form action="/action_page.php">
+  Select a time: <input type="time" name="usr_time">
+  <input type="submit">
+</form>
 </select>
 
   </article>
